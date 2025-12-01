@@ -42,7 +42,7 @@ git clone https://github.com/abmuslim/gopyserf.git
 
 1. Run the orchestration script:
    ```bash
-   ./orchestrated_serf.sh
+   ./orchestrate_serf.sh
    ```
 
    > It will take some time to pull the Docker images and start all pods.
