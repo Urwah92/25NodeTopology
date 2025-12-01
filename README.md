@@ -76,7 +76,7 @@ To run the buyer from inside each container for testing (inside the **buyer cont
 ./config_buyer.sh
 ```
 Then run the following command **inside the buyer container** (path: `/opt/serfapp/`).
-If the file `service_discovery_v7.py` is not present in the container, copy it from this repository into the container first.
+If the file `service_discovery_v7.py` is not present in the container, copy it from this repository (path: `25node_topo/serfapp/`) into the container first.
 ```bash
 python3 service_discovery_v7.py --geom-url http://172.20.20.17:4040/cluster-status --rtt-threshold-ms 12 --rpc-addr 127.0.0.1:7373 --timeout-s 8 --sort score_per_cpu --limit 30 --buyer-url http://127.0.0.1:8090/buyer --http-serve --http-host 0.0.0.0 --http-port 4041 --http-path /hilbert-output --loop --busy-secs 50
 ```
