@@ -9,7 +9,7 @@ Changes:
 - If locals unavailable after retries, the cycle is skipped (no CH queries).
 """
 
-import argparse, json, math, socket, subprocess, threading, time
+import argparse, json, math, os, socket, subprocess, threading, time
 from typing import Any, Dict, List, Optional
 
 import numpy as np
@@ -19,7 +19,7 @@ from hilbertcurve.hilbertcurve import HilbertCurve
 DEFAULT_SERF_RPC = "127.0.0.1:7373"
 DEFAULT_TIMEOUT_S = 8
 NET_P_BITS = 14
-NODE_JSON_PATH = "/opt/serfapp/node.json"
+NODE_JSON_PATH = os.environ.get("NODE_JSON_PATH", "/etc/serf/node.json")
 
 # ---------------------------------- I/O ----------------------------------
 def load_geometry(url: str, timeout: int = 5) -> List[Dict[str, Any]]:
@@ -811,4 +811,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

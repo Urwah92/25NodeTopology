@@ -9,4 +9,3 @@
       --http-serve --http-host 0.0.0.0 --http-port 4041 --http-path /hilbert-output \
       --post-output-url http://localhost:5665/initiate_tx \
       --buyer-url http://127.0.0.1:8090/buyer
-
