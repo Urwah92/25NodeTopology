@@ -8,11 +8,11 @@ set -euo pipefail
 PREFIX="clab-century-serf"
 START=1
 END=25
-TOPO_FILE="25node_update.yml"
+TOPO_FILE="25node_update_v2.yml"
 BRIDGE_NAME="switch_a"
 
-SLEEP_AFTER_DEPLOY=8
-SLEEP_AFTER_JOIN=5
+SLEEP_AFTER_DEPLOY=1
+SLEEP_AFTER_JOIN=1
 
 # Host scripts
 SCRIPT_IP="./ipaddressing.sh"

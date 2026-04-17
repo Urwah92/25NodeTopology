@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./ACp2p_v2 \
+./AC-P2P \
   -offer-url http://localhost:8080/resource_offer \
   -serf ./serf \
   -rpc-addr 127.0.0.1:7373 \

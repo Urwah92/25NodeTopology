@@ -9,14 +9,14 @@ for i in $(seq 1 12); do
 
   #echo "[$HOST] Setting up eth1 with IP $IP/24"
   # Apply 10ms delay
-  containerlab tools netem set -n "$HOST" -i eth1 --delay 10ms
+  containerlab tools netem set -n "$HOST" -i eth1 --delay 2ms
   
   echo "[$HOST] Configuration done."
 done
 
 
 # Apply 100ms delay on the link facing br_left
-sudo tc qdisc add dev eth20 root netem delay 50ms
+sudo tc qdisc add dev eth20 root netem delay 5ms
  
 # Apply 100ms delay on the link facing br_right (optional, if you want symmetric delay)
-sudo tc qdisc add dev eth27 root netem delay 50ms
+sudo tc qdisc add dev eth27 root netem delay 5ms
